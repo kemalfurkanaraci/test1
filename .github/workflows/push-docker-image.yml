@@ -22,14 +22,14 @@ jobs:
       
   securitytest: 
     # job name
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     # runner name : (ubuntu latest version)
-   steps:
-   - uses: actions/checkout@v3 # first action : checkout source code
-   - name: Checkout The Code
+    steps:
+    - uses: actions/checkout@v3 # first action : checkout source code
+    - name: Checkout The Code
 
-   - name: Download Dependency Check Tool
-   - run: wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip
+    - name: Download Dependency Check Tool
+    - run: wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip
 
    - name: Unzipping archive and install
    - run: unzip dependency-check-8.3.1-release.zip && ls -l && dependency-check/bin/dependency-check.sh -s .
