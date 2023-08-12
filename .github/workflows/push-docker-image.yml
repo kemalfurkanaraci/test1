@@ -19,3 +19,18 @@ jobs:
       
     - name: Docker Push
       run: docker push $DOCKER_USERNAME/test_repo:v1
+      
+  securitytest: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3 # first action : checkout source code
+
+    - name: Download Dependency Check Tool
+      run: wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip
+
+    - name: Unzipping archive and install
+      run: unzip dependency-check-8.3.1-release.zip && ls -l && dependency-check/bin/dependency-check.sh -s .
+   
+     
+
+ 
