@@ -4,7 +4,7 @@ on: [push] # When pushing to any branch then run this action
 env:
   DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
   DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  REPO_NAME: ${{kemalfurkanaraci/test1}}
+  REPO_NAME: ${{github.repository}}
 jobs:
   push-image-to-docker-hub:  # job name
     runs-on: ubuntu-latest  # runner name : (ubuntu latest version) 
