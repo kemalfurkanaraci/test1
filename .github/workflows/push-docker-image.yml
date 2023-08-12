@@ -20,10 +20,12 @@ jobs:
     - name: Docker Push
       run: docker push $DOCKER_USERNAME/test_repo:v1
       
-  securitytest: # job name
-   runs-on: ubuntu-latest # runner name : (ubuntu latest version)
+  securitytest: 
+    # job name
+   runs-on: ubuntu-latest
+    # runner name : (ubuntu latest version)
    steps:
-   - uses: actions/checkout@v3
+   - uses: actions/checkout@v3 # first action : checkout source code
    - name: Checkout The Code
 
    - name: Download Dependency Check Tool
