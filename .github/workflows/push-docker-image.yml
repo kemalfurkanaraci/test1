@@ -23,8 +23,8 @@ jobs:
   securitytest: 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3 # first action : checkout source code
     - name: Checkout The Code
+      uses: actions/checkout@v3 # first action : checkout source code
 
     - name: Download Dependency Check Tool
     - run: wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip
